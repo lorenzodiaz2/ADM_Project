@@ -3,8 +3,8 @@
 This is the public dataset catalog (metadata + persistent identifiers).
 
 Catalog:
-- Roma dataset: /dataset/roma/
-- Milano dataset: /dataset/milano/
+- Roma dataset: https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/
+- Milano dataset: https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/
 
 Sitemap:
 - /sitemap.xml

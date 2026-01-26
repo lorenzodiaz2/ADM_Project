@@ -15,7 +15,7 @@
 - Created: 13/12/2019
 - Last update: 26/01/2026
 - Dataset: https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/ 
-- Stop: https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/id/stop/roma:{stop_gtfs_id}
+- Stop: https://lorenzodiaz2.github.io/ADM_Project/id/stop/roma:{stop_gtfs_id}
 - Route: https://lorenzodiaz2.github.io/ADM_Project/id/route/roma:{route_gtfs_id}
 
 
@@ -34,5 +34,5 @@
 - Created: 04/04/2023
 - Last update: 21/01/2026 
 - Dataset: https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/ 
-- Stop: https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/id/stop/milano:{stop_gtfs_id}
+- Stop: https://lorenzodiaz2.github.io/ADM_Project/id/stop/milano:{stop_gtfs_id}
 - Route: https://lorenzodiaz2.github.io/ADM_Project/id/route/milano:{route_gtfs_id}
