@@ -115,8 +115,8 @@ https://lorenzodiaz2.github.io/ADM_Project/id/route/roma:{route_gtfs_id} \
 https://lorenzodiaz2.github.io/ADM_Project/id/route/milano:{route_gtfs_id}
 
 
-
-
+##
+All resources are retrievable via HTTPS (GitHub Pages) and HTTP/HTTPS (Django API). No authentication needed.
 
 
 
