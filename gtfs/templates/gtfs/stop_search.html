@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Ricerca fermate{% endblock %}
+{% block content %}
+<h1>Ricerca fermate</h1>
+
+<form method="get">
+  <label>Città:</label>
+  <select name="feed">
+    <option value="">-- scegli --</option>
+    {% for f in feeds %}
+      <option value="{{ f.slug }}" {% if f.slug == feed_slug %}selected{% endif %}>{{ f.name }}</option>
+    {% endfor %}
+  </select>
+
+  <label>Testo:</label>
+  <input type="text" name="q" value="{{ q }}" placeholder="es. Termini">
+
+  <button type="submit">Cerca</button>
+</form>
+
+{% if not feed_slug %}
+  <p><i>Seleziona una città (feed) e inserisci un testo per cercare le fermate.</i></p>
+{% elif feed_slug and not q %}
+  <p><i>Hai selezionato un feed. Ora inserisci un testo e premi Cerca.</i></p>
+{% endif %}
+
+{% if selected_feed %}
+  <p>
+    Feed selezionato: <b>{{ selected_feed.name }}</b>
+    ( <a href="{% url 'feed_detail' selected_feed.slug %}">dettaglio</a> )
+  </p>
+{% endif %}
+
+{% if selected_feed and q %}
+  <h2>Risultati (max 200) - {{ selected_feed.name }}</h2>
+  <ul>
+    {% for s in results %}
+      <li>{{ s.name }} {% if s.lat and s.lon %} ({{ s.lat }}, {{ s.lon }}){% endif %}</li>
+    {% empty %}
+      <li>Nessun risultato.</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Elenco linee{% endblock %}
+{% block content %}
+<h1>Elenco linee</h1>
+
+<form method="get">
+  <label>Città:</label>
+  <select name="feed">
+    <option value="">-- scegli --</option>
+    {% for f in feeds %}
+      <option value="{{ f.slug }}" {% if f.slug == feed_slug %}selected{% endif %}>{{ f.name }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Mostra</button>
+</form>
+
+{% if not feed_slug %}
+  <p><i>Seleziona una citta (feed) e premi Mostra.</i></p>
+{% endif %}
+
+{% if selected_feed %}
+  <p>
+    Feed selezionato: <b>{{ selected_feed.name }}</b>
+    ( <a href="{% url 'feed_detail' selected_feed.slug %}">dettaglio</a>)
+  </p>
+
+  <h2>{{ selected_feed.name }} (max 500)</h2>
+  <ul>
+    {% for r in routes %}
+      <li>
+        {% if r.short_name %}<b>{{ r.short_name }}</b>{% endif %}
+        {% if r.long_name %} - {{ r.long_name }}{% endif %}
+      </li>
+    {% empty %}
+      <li>Nessuna linea trovata.</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% endblock %}

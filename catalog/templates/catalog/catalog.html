@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Catalogo{% endblock %}
+{% block content %}
+<h1>Catalogo dataset</h1>
+
+<ul>
+  {% for f in feeds %}
+    <li>
+      <b><a href="{% url 'feed_detail' f.slug %}">{{ f.name }}</a></b>
+      {% if f.provider %} - {{ f.provider }}{% endif %}
+      <br>
+      <small>
+        <a href="{% url 'feed_detail' f.slug %}">Dettaglio</a> |
+        <a href="{% url 'stop_search' %}?feed={{ f.slug }}">Cerca fermate</a> |
+        <a href="{% url 'route_list' %}?feed={{ f.slug }}">Elenco linee</a>
+      </small>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

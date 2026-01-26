@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}FAIRTransit Hub{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <a href="{% url 'catalog' %}">Catalogo</a> |
+    <a href="{% url 'stop_search' %}">Ricerca fermate</a> |
+    <a href="{% url 'route_list' %}">Elenco linee</a> |
+    <a href="/admin/">Admin</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
