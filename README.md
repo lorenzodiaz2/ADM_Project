@@ -94,3 +94,29 @@ http://127.0.0.1:8000/api/routes/?feed=milano
 - For API/LOD, we can build combined external IDs like:
   feed_slug + ":" + gtfs_id
 Example: "roma:1234"
+
+
+## Persistent Identifier
+BASE URL = https://lorenzodiaz2.github.io/ADM_Project/
+
+Dataset:\
+https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/ \
+https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/ \
+
+
+Stop:\
+https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/id/stop/roma:{stop_gtfs_id}  \
+https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/id/stop/milano:{stop_gtfs_id}  \
+
+
+Route:\
+https://lorenzodiaz2.github.io/ADM_Project/id/route/roma:{route_gtfs_id} \
+https://lorenzodiaz2.github.io/ADM_Project/id/route/milano:{route_gtfs_id} \
+
+
+
+
+
+
+
+
