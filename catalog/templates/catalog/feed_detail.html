@@ -1,22 +1,24 @@
 {% extends "base.html" %}
 {% block title %}{{ feed.name }}{% endblock %}
 {% block content %}
-<h1>Dataset: {{ feed.name }}</h1>
+    <h1>Dataset: {{ feed.name }}</h1>
 
-<p><b>Slug:</b> {{ feed.slug }}</p>
-{% if feed.source_url %}<p><b>Fonte:</b> <a href="{{ feed.source_url }}">{{ feed.source_url }}</a></p>{% endif %}
-{% if feed.provider %}<p><b>Provider:</b> {{ feed.provider }}</p>{% endif %}
+    <p><b>Slug:</b> {{ feed.slug }}</p>
+    {% if feed.source_url %}<p><b>Fonte:</b> <a href="{{ feed.source_url }}">{{ feed.source_url }}</a></p>{% endif %}
+    {% if feed.provider %}<p><b>Provider:</b> {{ feed.provider }}</p>{% endif %}
 
-<p>
-  <b>Azioni:</b>
-  <a href="{% url 'stop_search' %}?feed={{ feed.slug }}">Cerca fermate in {{ feed.name }}</a> |
-  <a href="{% url 'route_list' %}?feed={{ feed.slug }}">Elenco linee di {{ feed.name }}</a>
-</p>
+    <p><b>Identifier:</b> <a href="{{ identifier }}">{{ identifier }}</a></p>
 
-<h2>Conteggi</h2>
-<ul>
-  <li>Agenzie: {{ counts.agencies }}</li>
-  <li>Fermate: {{ counts.stops }}</li>
-  <li>Linee: {{ counts.routes }}</li>
-</ul>
+    <p>
+        <b>Azioni:</b>
+        <a href="{% url 'stop_search' %}?feed={{ feed.slug }}">Cerca fermate in {{ feed.name }}</a> |
+        <a href="{% url 'route_list' %}?feed={{ feed.slug }}">Elenco linee di {{ feed.name }}</a>
+    </p>
+
+    <h2>Conteggi</h2>
+    <ul>
+        <li>Agenzie: {{ counts.agencies }}</li>
+        <li>Fermate: {{ counts.stops }}</li>
+        <li>Linee: {{ counts.routes }}</li>
+    </ul>
 {% endblock %}

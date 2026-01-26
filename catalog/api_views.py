@@ -2,6 +2,7 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from .models import Feed
 from gtfs.models import Stop, Route, Agency
+from django.conf import settings
 
 def catalog_list(request):
     feeds = Feed.objects.order_by("name")
@@ -17,6 +18,7 @@ def catalog_list(request):
 
 def feed_detail(request, slug):
     feed = get_object_or_404(Feed, slug=slug)
+    identifier = f"{settings.PUBLIC_BASE_URL}/dataset/{feed.slug}/"
     counts = {
         "agencies": Agency.objects.filter(feed=feed).count(),
         "stops": Stop.objects.filter(feed=feed).count(),
@@ -28,6 +30,7 @@ def feed_detail(request, slug):
             "slug": feed.slug,
             "provider": feed.provider,
             "source_url": feed.source_url,
+            "identifier": identifier,
         },
         "counts": counts,
     })
