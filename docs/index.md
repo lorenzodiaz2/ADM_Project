@@ -1,4 +1,4 @@
-# ADM_Project - FAIRTransit Hub
+`# ADM_Project - FAIRTransit Hub
 
 This is the public dataset catalog (metadata + persistent identifiers).
 
@@ -7,4 +7,4 @@ Catalog:
 - Milano dataset: [https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/](https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/)
 
 Sitemap:
-- /sitemap.xml
+- [sitemap.xml](/ADM_Project/sitemap.xml)
