@@ -126,3 +126,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 PUBLIC_BASE_URL = "https://lorenzodiaz2.github.io/ADM_Project"
+
+PUBLIC_API_BASE_URL = ""
+
+FEED_LICENSE_URLS = {
+    "roma": "https://creativecommons.org/licenses/by/4.0/",
+    "milano": "https://creativecommons.org/licenses/by/4.0/",
+}
+
+PUBLIC_METADATA_PROFILE_URL = "https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/"
+
