@@ -7,4 +7,4 @@ Catalog:
 - Milano dataset: [https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/](https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/)
 
 Sitemap:
-- [sitemap.xml](/ADM_Project/sitemap.xml)
+- [https://lorenzodiaz2.github.io/ADM_Project/sitemap.xml](https://lorenzodiaz2.github.io/ADM_Project/sitemap.xml)
