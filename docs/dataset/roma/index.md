@@ -60,16 +60,16 @@ Provenance is declared using qualified references:
 ### Access (distributions)
 
 Machine-readable metadata (JSON-LD):
-- http://127.0.0.1:8000/api/catalog/roma.jsonld
+- [http://127.0.0.1:8000/api/catalog/roma.jsonld](http://127.0.0.1:8000/api/catalog/roma.jsonld)
 
 Metadata (JSON API):
-- http://127.0.0.1:8000/api/catalog/roma/
+- [http://127.0.0.1:8000/api/catalog/roma/](http://127.0.0.1:8000/api/catalog/roma/)
 
 Routes list (JSON API):
-- http://127.0.0.1:8000/api/routes/?feed=roma
+- [http://127.0.0.1:8000/api/routes/?feed=roma](http://127.0.0.1:8000/api/routes/?feed=roma)
 
 Stop search (JSON API):
-- http://127.0.0.1:8000/api/stops/search/?feed=roma&q=TERM
+- [http://127.0.0.1:8000/api/stops/search/?feed=roma&q=TERM](http://127.0.0.1:8000/api/stops/search/?feed=roma&q=TERM)
 
 Human-readable landing page (persistent identifier):
-- https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/
+- [https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/](https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/)

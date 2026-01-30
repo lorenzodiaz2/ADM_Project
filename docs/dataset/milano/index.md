@@ -58,16 +58,16 @@ Provenance is declared using qualified references:
 ### Access (distributions)
 
 Machine-readable metadata (JSON-LD):
-- http://127.0.0.1:8000/api/catalog/milano.jsonld
+- [http://127.0.0.1:8000/api/catalog/milano.jsonld](http://127.0.0.1:8000/api/catalog/milano.jsonld)
 
 Metadata (JSON API):
-- http://127.0.0.1:8000/api/catalog/milano/
+- [http://127.0.0.1:8000/api/catalog/milano/](http://127.0.0.1:8000/api/catalog/milano/)
 
 Routes list (JSON API):
-- http://127.0.0.1:8000/api/routes/?feed=milano
+- [http://127.0.0.1:8000/api/routes/?feed=milano](http://127.0.0.1:8000/api/routes/?feed=milano)
 
 Stop search (JSON API):
-- http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM
+- [http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM](http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM)
 
 Human-readable landing page (persistent identifier):
-- https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/
+- [https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/](https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/)
