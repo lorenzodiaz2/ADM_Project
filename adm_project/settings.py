@@ -134,5 +134,21 @@ FEED_LICENSE_URLS = {
     "milano": "https://creativecommons.org/licenses/by/4.0/",
 }
 
-PUBLIC_METADATA_PROFILE_URL = "https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/"
+PUBLIC_METADATA_PROFILE_URL = "https://lorenzodiaz2.github.io/ADM_Project/metadata-profile"
 
+FEED_SPATIAL_URIS = {
+    "roma": "http://www.wikidata.org/entity/Q220",
+    "milano": "http://www.wikidata.org/entity/Q490",
+}
+
+FEED_PUBLISHER_HOMEPAGES = {
+    "roma": "https://romamobilita.it/",
+    "milano": "https://www2.comune.milano.it/comune/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/organigramma/direzione-mobilita",
+}
+
+GTFS_SCHEDULE_REFERENCE_URL = "https://gtfs.org/documentation/schedule/reference/"
+
+FEED_PUBLISHER_IDS = {
+    "roma": "https://romamobilita.it/",
+    "milano": "https://www2.comune.milano.it/comune/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/organigramma/direzione-mobilita",
+}

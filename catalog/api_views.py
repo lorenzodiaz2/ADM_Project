@@ -81,6 +81,15 @@ def _jsonld_context():
         "derivedFrom": {"@id": "prov:wasDerivedFrom", "@type": "@id"},
 
         "name": "foaf:name",
+
+        "spatial": {"@id": "dct:spatial", "@type": "@id"},
+        "homepage": {"@id": "foaf:homepage", "@type": "@id"},
+        "Agent": "foaf:Agent",
+
+        "keyword": "dcat:keyword",
+        "language": "dct:language",
+        "mediaType": "dcat:mediaType",
+        "format": "dct:format",
     }
 
 
@@ -89,15 +98,45 @@ def _pages_dataset_id(slug: str) -> str:
     return f"{base}/dataset/{slug}/"
 
 
+def _spatial_uri_for_feed(feed):
+    mapping = getattr(settings, "FEED_SPATIAL_URIS", {})
+    return mapping.get(getattr(feed, "slug", ""), None)
+
+
+def _publisher_homepage_for_feed(feed):
+    mapping = getattr(settings, "FEED_PUBLISHER_HOMEPAGES", {})
+    return mapping.get(getattr(feed, "slug", ""), None)
+
+
+def _publisher_id_for_feed(feed):
+    mapping = getattr(settings, "FEED_PUBLISHER_IDS", {})
+    return mapping.get(getattr(feed, "slug", ""), None)
+
+
+
 def _publisher_object(feed):
-    # Publisher come oggetto FOAF (nome), senza forzare un URI esterno
     provider = (getattr(feed, "provider", "") or "").strip()
     if not provider:
         return None
-    return {
+
+    homepage = _publisher_homepage_for_feed(feed)
+    pub_id = _publisher_id_for_feed(feed)
+
+    obj = {
         "@type": "foaf:Agent",
         "name": provider,
     }
+
+    # Se abbiamo un identificatore pubblico per il publisher, lo usiamo come @id
+    if pub_id:
+        obj["@id"] = pub_id
+
+    # Homepage qualificata (foaf:homepage) se disponibile
+    if homepage:
+        obj["homepage"] = homepage
+
+    return obj
+
 
 
 def _license_url_for_feed(feed):
@@ -157,6 +196,15 @@ def _dataset_jsonld(request, feed):
     if sha256:
         long_desc += f" Latest import SHA256: {sha256}."
 
+    profile_url = getattr(settings, "PUBLIC_METADATA_PROFILE_URL", None)
+    gtfs_url = getattr(settings, "GTFS_SCHEDULE_REFERENCE_URL", None)
+
+    conforms = []
+    if profile_url:
+        conforms.append(profile_url)
+    if gtfs_url:
+        conforms.append(gtfs_url)
+
     obj = {
         "@id": dataset_id,
         "@type": "Dataset",
@@ -164,8 +212,12 @@ def _dataset_jsonld(request, feed):
         "title": f"GTFS {feed.name}",
         "description": long_desc,
         "landingPage": dataset_id,
-        "conformsTo": settings.PUBLIC_METADATA_PROFILE_URL,
+        "conformsTo": conforms,
     }
+
+    spatial_uri = _spatial_uri_for_feed(feed)
+    if spatial_uri:
+        obj["spatial"] = spatial_uri
 
     pub = _publisher_object(feed)
     if pub:
@@ -211,10 +263,13 @@ def _dataset_jsonld(request, feed):
                 "@type": "Distribution",
                 "accessURL": src,
                 "title": "Official source page (GTFS provider)",
+                "mediaType": "text/html",
             }
         )
 
     obj["distribution"] = distributions
+    obj["language"] = "it"
+    obj["keyword"] = ["gtfs", "public transport", feed.name.lower(), "open data", "schedule"]
 
     return obj
 

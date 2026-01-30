@@ -14,3 +14,6 @@
   * Publisher -> dct:publisher (foaf:Agent con foaf:name)
   * Provenance/source -> prov:wasDerivedFrom
   * Distributions -> dcat:distribution (con dcat:accessURL)
+  * keyword -> dcat:keyword
+  * language -> dct:language
+  * mediaType -> dcat:mediaType (in Distribution)
