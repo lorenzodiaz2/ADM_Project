@@ -68,6 +68,3 @@ Routes list (JSON API):
 
 Stop search (JSON API):
 - [http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM](http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM)
-
-Human-readable landing page (persistent identifier):
-- [https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/](https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/)
