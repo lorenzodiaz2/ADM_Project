@@ -1,4 +1,4 @@
-# “ADM_Project Metadata Profile (JSON-LD)”
+# ADM_Project Metadata Profile (JSON-LD)
 ### Vocabularies used
   * [DCAT](https://www.w3.org/TR/vocab-dcat-3/): per Catalog, Dataset, Distribution
   * [DCTERMS](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/): title, description, identifier, license, publisher, modified
