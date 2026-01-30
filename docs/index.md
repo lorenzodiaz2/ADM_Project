@@ -10,4 +10,4 @@ Sitemap:
 - [https://lorenzodiaz2.github.io/ADM_Project/sitemap.xml](https://lorenzodiaz2.github.io/ADM_Project/sitemap.xml)
 
 Metadata profile:
-- [https://lorenzodiaz2.github.io/ADM_Project/metadata-profile.md](https://lorenzodiaz2.github.io/ADM_Project/metadata-profile.md)
+- [https://lorenzodiaz2.github.io/ADM_Project/metadata-profile](https://lorenzodiaz2.github.io/ADM_Project/metadata-profile)
