@@ -129,6 +129,6 @@ All resources are retrievable via HTTPS (GitHub Pages) and HTTP/HTTPS (Django AP
 * Vocabularies:
   * DCAT, DCTERMS, PROV-O, FOAF
 * Metadata profile:
-  * ["https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/"]("https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/")
+  * [https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/](https://lorenzodiaz2.github.io/ADM_Project/metadata-profile/)
 
 
