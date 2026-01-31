@@ -105,18 +105,22 @@ https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/ \
 https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/
 
 
-Stop (template link):\
+Stop (template links):\
 https://lorenzodiaz2.github.io/ADM_Project/id/stop/roma:{stop_gtfs_id}  \
 https://lorenzodiaz2.github.io/ADM_Project/id/stop/milano:{stop_gtfs_id}
 
 
-Route (template link):\
+Route (template links):\
 https://lorenzodiaz2.github.io/ADM_Project/id/route/roma:{route_gtfs_id} \
 https://lorenzodiaz2.github.io/ADM_Project/id/route/milano:{route_gtfs_id}
 
 
-##
-All resources are retrievable via HTTPS (GitHub Pages) and HTTP/HTTPS (Django API). No authentication needed.
+
+## Accessibility notes (dev vs production)
+All resources are retrievable via HTTPS (GitHub Pages) and HTTP/HTTPS (Django API). No authentication is required.
+
+Note: API URLs in this README (127.0.0.1) and in JSON-LD distributions refer to the local development server.
+In a production deployment, set PUBLIC_API_BASE_URL to a public domain so that API distributions become globally resolvable.
 
 
 
@@ -132,3 +136,7 @@ All resources are retrievable via HTTPS (GitHub Pages) and HTTP/HTTPS (Django AP
   * [https://lorenzodiaz2.github.io/ADM_Project/metadata-profile](https://lorenzodiaz2.github.io/ADM_Project/metadata-profile)
 
 
+## Licensing
+- Code: MIT License (see LICENSE file in this repository).
+- Datasets (Roma/Milano GTFS): licenses are defined by the original providers and are referenced in each dataset landing page and JSON-LD metadata.
+  This project republishes metadata and provides an access API for demonstration; it does not modify or override the original dataset licenses.
