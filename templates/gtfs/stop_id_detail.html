@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Stop resolver</title>
+</head>
+<body>
+  <h1>Stop</h1>
+
+  <p><strong>Persistent identifier:</strong> <a href="{{ identifier }}">{{ identifier }}</a></p>
+  <p><strong>Dataset:</strong> <a href="{{ dataset_landing }}">{{ dataset_landing }}</a></p>
+
+  <h2>Details</h2>
+  <ul>
+    <li>Feed: {{ feed.slug }} ({{ feed.name }})</li>
+    <li>stop_gtfs_id: {{ stop.stop_gtfs_id }}</li>
+    <li>Name: {{ stop.stop_name }}</li>
+    <li>Lat: {{ stop.stop_lat }}</li>
+    <li>Lon: {{ stop.stop_lon }}</li>
+  </ul>
+
+  <h2>Machine-readable</h2>
+  <ul>
+    <li><a href="?format=json">JSON</a></li>
+    <li><a href="?format=jsonld">JSON-LD</a></li>
+  </ul>
+</body>
+</html>
