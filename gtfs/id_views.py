@@ -20,7 +20,7 @@ def _split_key(key: str):
 
 def _public_id_url(kind: str, feed_slug: str, gtfs_id: str) -> str:
     base = getattr(settings, "PUBLIC_BASE_URL", "").rstrip("/")
-    return f"{base}/id/{kind}/{feed_slug}:{gtfs_id}"
+    return f"{base}/resources/{kind}/{feed_slug}:{gtfs_id}"
 
 
 def stop_id_resolver(request, key: str):

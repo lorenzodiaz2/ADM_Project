@@ -106,13 +106,13 @@ https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/
 
 
 Stop (template links):\
-https://lorenzodiaz2.github.io/ADM_Project/id/stop/roma:{stop_gtfs_id}  \
-https://lorenzodiaz2.github.io/ADM_Project/id/stop/milano:{stop_gtfs_id}
+https://lorenzodiaz2.github.io/ADM_Project/resources/stop/roma:{stop_gtfs_id}  \
+https://lorenzodiaz2.github.io/ADM_Project/resources/stop/milano:{stop_gtfs_id}
 
 
 Route (template links):\
-https://lorenzodiaz2.github.io/ADM_Project/id/route/roma:{route_gtfs_id} \
-https://lorenzodiaz2.github.io/ADM_Project/id/route/milano:{route_gtfs_id}
+https://lorenzodiaz2.github.io/ADM_Project/resources/route/roma:{route_gtfs_id} \
+https://lorenzodiaz2.github.io/ADM_Project/resources/route/milano:{route_gtfs_id}
 
 
 
