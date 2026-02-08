@@ -14,8 +14,8 @@ class Feed(models.Model):
 class FeedVersion(models.Model):
     feed = models.ForeignKey(Feed, on_delete=models.CASCADE, related_name="versions")
     imported_at = models.DateTimeField(auto_now_add=True)
-    gtfs_zip_name = models.CharField(max_length=255)  # nome file zip
-    sha256 = models.CharField(max_length=64, blank=True)  # opzionale
+    gtfs_zip_name = models.CharField(max_length=255)
+    sha256 = models.CharField(max_length=64, blank=True)
     notes = models.TextField(blank=True)
 
     def __str__(self):

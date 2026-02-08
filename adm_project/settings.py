@@ -152,3 +152,5 @@ FEED_PUBLISHER_IDS = {
     "roma": "https://romamobilita.it/",
     "milano": "https://www2.comune.milano.it/comune/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/organigramma/direzione-mobilita",
 }
+
+INSTALLED_APPS += ["django_extensions"]

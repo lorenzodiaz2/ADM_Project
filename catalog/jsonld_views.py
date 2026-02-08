@@ -151,6 +151,9 @@ def feed_metadata_jsonld(request, slug: str):
     if import_info.get("sha256"):
         dataset["dct:identifier"] = f"sha256:{import_info['sha256']}"
 
+    if meta.get("spatial_uri"):
+        dataset["dct:spatial"] = {"@id": meta["spatial_uri"]}
+
     # Distributions: API endpoints + source page
     distributions = [
         {
