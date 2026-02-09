@@ -7,6 +7,8 @@ class Feed(models.Model):
     slug = models.SlugField(max_length=50, unique=True, null=True, blank=True)
     provider = models.CharField(max_length=200, blank=True)
     source_url = models.URLField(blank=True)
+    operator_qid = models.CharField(max_length=32)
+    area_qid = models.CharField(max_length=32)
 
     def __str__(self):
         return self.name

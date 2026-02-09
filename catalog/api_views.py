@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404
 from .models import Feed
 from gtfs.models import Stop, Route, Agency
 from django.conf import settings
+from catalog.uri_policy import dataset_uri, dataset_path
 
 
 def _api_base_url(request) -> str:
@@ -18,6 +19,12 @@ def _api_url(request, path: str) -> str:
     return _api_base_url(request) + path
 
 
+def _pages_dataset_id(slug: str) -> str:
+    # Canonical dataset landing page (GitHub Pages)
+    return dataset_uri(slug)
+
+
+
 def catalog_list(request):
     feeds = Feed.objects.order_by("name")
     data = []
@@ -30,9 +37,9 @@ def catalog_list(request):
         })
     return JsonResponse({"feeds": data})
 
-def feed_detail(request, slug):
+def feed_detail(slug):
     feed = get_object_or_404(Feed, slug=slug)
-    identifier = f"{settings.PUBLIC_BASE_URL}/dataset/{feed.slug}/"
+    identifier = dataset_uri(feed.slug)
     counts = {
         "agencies": Agency.objects.filter(feed=feed).count(),
         "stops": Stop.objects.filter(feed=feed).count(),
@@ -92,10 +99,6 @@ def _jsonld_context():
         "format": "dct:format",
     }
 
-
-def _pages_dataset_id(slug: str) -> str:
-    base = getattr(settings, "PUBLIC_BASE_URL", "").rstrip("/")
-    return f"{base}/dataset/{slug}/"
 
 
 def _spatial_uri_for_feed(feed):
@@ -174,7 +177,7 @@ def _latest_feed_version_info(feed):
 
 def _dataset_jsonld(request, feed):
     slug = feed.slug
-    dataset_id = _pages_dataset_id(slug)
+    dataset_id = _pages_dataset_id(feed)
 
     # Link di accesso: API JSON “normale” già esistente
     api_detail = _api_url(request, f"/api/catalog/{slug}/")

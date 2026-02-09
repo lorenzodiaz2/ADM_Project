@@ -136,21 +136,39 @@ FEED_LICENSE_URLS = {
 
 PUBLIC_METADATA_PROFILE_URL = "https://lorenzodiaz2.github.io/ADM_Project/metadata-profile"
 
-FEED_SPATIAL_URIS = {
-    "roma": "http://www.wikidata.org/entity/Q220",
-    "milano": "http://www.wikidata.org/entity/Q490",
-}
 
-FEED_PUBLISHER_HOMEPAGES = {
-    "roma": "https://romamobilita.it/",
-    "milano": "https://www2.comune.milano.it/comune/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/organigramma/direzione-mobilita",
-}
 
 GTFS_SCHEDULE_REFERENCE_URL = "https://gtfs.org/documentation/schedule/reference/"
 
-FEED_PUBLISHER_IDS = {
-    "roma": "https://romamobilita.it/",
-    "milano": "https://www2.comune.milano.it/comune/amministrazione-trasparente/organizzazione/articolazione-degli-uffici/organigramma/direzione-mobilita",
-}
 
 INSTALLED_APPS += ["django_extensions"]
+# ---------- Canonical URI policy (Wikidata-based) ----------
+
+# slug -> publisher QID (organization that publishes the dataset)
+FEED_PUBLISHER_QIDS = {
+    "roma": "Q30284569",      # Roma Servizi per la Mobilità
+    "milano": "Q106225029",   # Comune di Milano (come richiesto)
+}
+
+# slug -> area QID (geographic coverage)
+FEED_AREA_QIDS = {
+    "roma": "Q220",  # Rome
+    "milano": "Q490" # Milan
+}
+
+# Optional: also expose the QIDs already as full URIs (used by your JSON-LD helpers)
+FEED_PUBLISHER_IDS = {
+    "roma": "https://www.wikidata.org/entity/Q30284569",
+    "milano": "https://www.wikidata.org/entity/Q106225029",
+}
+
+FEED_SPATIAL_URIS = {
+    "roma": "https://www.wikidata.org/entity/Q220",
+    "milano": "https://www.wikidata.org/entity/Q490",
+}
+
+# (Optional) homepage mapping if you want foaf:homepage in publisher object
+FEED_PUBLISHER_HOMEPAGES = {
+    "roma": "https://romamobilita.it/",
+    "milano": "https://www.comune.milano.it/",
+}

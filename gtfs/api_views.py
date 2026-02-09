@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from catalog.models import Feed
 from .models import Stop, Route
+from catalog.uri_policy import stop_uri, route_uri
 
 def stop_search(request):
     feed_slug = (request.GET.get("feed") or "").strip()
@@ -24,6 +25,7 @@ def stop_search(request):
         "lat": s.lat,
         "lon": s.lon,
         "external_id": f"{feed.slug}:{s.stop_gtfs_id}",
+        "uri": stop_uri(feed.slug, s.stop_gtfs_id),
     } for s in qs]
 
     return JsonResponse({
@@ -53,6 +55,7 @@ def route_list(request):
         "short_name": r.short_name,
         "long_name": r.long_name,
         "external_id": f"{feed.slug}:{r.route_gtfs_id}",
+        "uri": route_uri(feed.slug, r.route_gtfs_id),
     } for r in qs]
 
     return JsonResponse({
