@@ -71,3 +71,4 @@ Routes list (JSON API):
 
 Stop search (JSON API):
 - http://127.0.0.1:8000/api/stops/search/?feed=milano&q=TERM
+
