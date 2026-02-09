@@ -101,18 +101,18 @@ Example: "roma:1234"
 BASE URL = https://lorenzodiaz2.github.io/ADM_Project/
 
 Dataset:\
-https://lorenzodiaz2.github.io/ADM_Project/dataset/roma/ \
-https://lorenzodiaz2.github.io/ADM_Project/dataset/milano/
+https://lorenzodiaz2.github.io/ADM_Project/dataset/wd/Q30284569/wd/Q220/ \
+https://lorenzodiaz2.github.io/ADM_Project/dataset/wd/Q106225029/wd/Q490/
 
 
 Stop (template links):\
-https://lorenzodiaz2.github.io/ADM_Project/resources/stop/roma:{stop_gtfs_id}  \
-https://lorenzodiaz2.github.io/ADM_Project/resources/stop/milano:{stop_gtfs_id}
+https://lorenzodiaz2.github.io/ADM_Project/resources/stop/wd/Q30284569/wd/Q220/{stop_gtfs_id}  \
+https://lorenzodiaz2.github.io/ADM_Project/resources/stop/wd/Q106225029/wd/Q490/{stop_gtfs_id}
 
 
 Route (template links):\
 https://lorenzodiaz2.github.io/ADM_Project/resources/route/roma:{route_gtfs_id} \
-https://lorenzodiaz2.github.io/ADM_Project/resources/route/milano:{route_gtfs_id}
+https://lorenzodiaz2.github.io/ADM_Project/resources/route/wd/Q106225029/wd/Q490/{route_gtfs_id}
 
 
 
