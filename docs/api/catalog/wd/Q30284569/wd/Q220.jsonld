@@ -20,18 +20,23 @@
         "@type": "dcat:Distribution",
         "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/metadata-jsonld",
         "dct:title": "Metadata (JSON-LD)",
-        "dcat:accessURL": {
-          "@id": "https://lorenzodiaz2.github.io/ADM_Project/api/catalog/wd/Q30284569/wd/Q220.jsonld"
-        },
+        "dcat:accessURL": { "@id": "https://lorenzodiaz2.github.io/ADM_Project/api/catalog/wd/Q30284569/wd/Q220.jsonld" },
         "dct:format": "application/ld+json"
       },
       {
         "@type": "dcat:Distribution",
-        "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip",
-        "dct:title": "GTFS data (ZIP)",
-        "dcat:downloadURL": {
-          "@id": "https://dati.comune.roma.it/catalog/dataset/a7dadb4a-66ae-4eff-8ded-a102064702ba/resource/266d82e1-ba53-4510-8a81-370880c4678f/download/rome_static_gtfs.zip"
-        },
+        "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip/2026-01-10",
+        "dct:title": "GTFS data (ZIP) — snapshot 2026-01-10",
+        "dct:issued": { "@value": "2026-01-10", "@type": "xsd:date" },
+        "dcat:accessURL": { "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip/2026-01-10" },
+        "dct:format": "application/zip"
+      },
+      {
+        "@type": "dcat:Distribution",
+        "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip/2025-12-01",
+        "dct:title": "GTFS data (ZIP) — snapshot 2025-12-01",
+        "dct:issued": { "@value": "2025-12-01", "@type": "xsd:date" },
+        "dcat:accessURL": { "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip/2025-12-01" },
         "dct:format": "application/zip"
       }
     ]
