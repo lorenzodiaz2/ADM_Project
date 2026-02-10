@@ -1,0 +1,38 @@
+{
+    "@context": {
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "prov": "http://www.w3.org/ns/prov#"
+    },
+    "@id": "https://lorenzodiaz2.github.io/ADM_Project/dataset/wd/Q30284569/wd/Q220/",
+    "@type": "dcat:Dataset",
+    "dct:title": "GTFS Roma (Static)",
+    "dct:spatial": { "@id": "https://www.wikidata.org/entity/Q220" },
+    "dct:publisher": { "@id": "https://www.wikidata.org/entity/Q30284569" },
+    "dct:conformsTo": [
+      { "@id": "https://lorenzodiaz2.github.io/ADM_Project/metadata-profile" },
+      { "@id": "https://gtfs.org/documentation/schedule/reference/" }
+    ],
+    "dct:license": { "@id": "https://creativecommons.org/licenses/by/4.0/" },
+    "prov:wasDerivedFrom": { "@id": "https://www.dati.gov.it/view-dataset/dataset?id=5bb208ed-e7ce-48c7-afc4-bf8dd15ea6fc" },
+    "dcat:distribution": [
+      {
+        "@type": "dcat:Distribution",
+        "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/metadata-jsonld",
+        "dct:title": "Metadata (JSON-LD)",
+        "dcat:accessURL": {
+          "@id": "https://lorenzodiaz2.github.io/ADM_Project/api/catalog/wd/Q30284569/wd/Q220.jsonld"
+        },
+        "dct:format": "application/ld+json"
+      },
+      {
+        "@type": "dcat:Distribution",
+        "@id": "https://lorenzodiaz2.github.io/ADM_Project/distribution/wd/Q30284569/wd/Q220/gtfs-zip",
+        "dct:title": "GTFS data (ZIP)",
+        "dcat:downloadURL": {
+          "@id": "https://dati.comune.roma.it/catalog/dataset/a7dadb4a-66ae-4eff-8ded-a102064702ba/resource/266d82e1-ba53-4510-8a81-370880c4678f/download/rome_static_gtfs.zip"
+        },
+        "dct:format": "application/zip"
+      }
+    ]
+}
